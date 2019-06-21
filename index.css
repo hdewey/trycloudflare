@@ -750,7 +750,9 @@ body {
         box-shadow: 2em 4em 6em -2em rgb(0,0,0,.5),1em 2em 3.5em -2.5em rgba(0,0,0,.5);
         border-radius: .5em;
         will-change: transform;
-        transition: transform .4s ease,box-shadow .4s ease
+        transition: transform .4s ease,box-shadow .4s ease;
+        background-color: black;
+        color: white;
     }
 }
 
@@ -865,7 +867,7 @@ body {
 }
 
 .QuoteSection--quote>p {
-    text-indent: -.425em
+
 }
 
 @media (max-width: 768px) {
@@ -878,12 +880,6 @@ body {
         order: 0;
         font-size: 1.25em;
         margin: 0 0 1em
-    }
-
-    .QuoteSection--cite {
-        order: 1;
-        margin: 0;
-        padding-left: 3em;
     }
 
     .QuoteSection--cite-name {
@@ -900,6 +896,9 @@ body {
     margin-left: auto;
     margin-right: auto;
     padding-bottom: var(--section-vertical-padding);
+
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
 .GreatPowerSection--title {
@@ -950,7 +949,8 @@ body {
 
 .BenefitsSection--cta {
     font-size: 1.333em;
-    text-align: center
+    text-align: center;
+    align-items: center;
 }
 
 .BenefitsSection--cta-title {
@@ -1367,4 +1367,8 @@ body {
 
 .SetupSection--button-and-text-text {
     flex: 1
+}
+
+.try-now {
+  margin-top: 1.5vh;
 }
