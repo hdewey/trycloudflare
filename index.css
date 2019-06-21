@@ -233,7 +233,7 @@ body {
 .Button-is-primary {
     --box-shadow: var(--shadow-box-shadow);background: linear-gradient(25deg,rgb(var(--cloudflare-logo-orange-rgb)),rgb(var(--cloudflare-logo-light-orange-rgb)));
     color: #fff;
-    
+
 }
 
 .Button-is-secondary {
@@ -884,19 +884,11 @@ body {
         order: 1;
         margin: 0;
         padding-left: 3em;
-        font-style: italic
     }
 
     .QuoteSection--cite-name {
         position: relative;
         font-size: 1.25em
-    }
-
-    .QuoteSection--cite-name::before {
-        position: absolute;
-        content: "—";
-        top: 0;
-        right: calc(100% + .4em)
     }
 }
 
