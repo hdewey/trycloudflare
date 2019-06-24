@@ -679,7 +679,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    --vertical-padding-top: 4em;--horizontal-gap: 4em;--illustration-width-ems: 28.8;--illustration-font-size: 1em;padding: calc(var(--header-height) + var(--vertical-padding-top)) 2em var(--section-vertical-padding);
+    --vertical-padding-top: 4em;--horizontal-gap: 4em;--ration-width-ems: 28.8;--ration-font-size: 1em;padding: calc(var(--header-height) + var(--vertical-padding-top)) 2em var(--section-vertical-padding);
     width: 100%
 }
 
@@ -727,25 +727,25 @@ body {
     margin-right: 1em
 }
 
-.HeroSection--illustration {
+.HeroSection--ration {
     flex-shrink: 0;
-    font-size: var(--illustration-font-size);
-    width: calc(1em*var(--illustration-width-ems))
+    font-size: var(--ration-font-size);
+    width: calc(1em*var(--ration-width-ems))
 }
 
 @media (min-width: 961px) and (max-width:1300px) {
     .HeroSection--column {
-        --illustration-font-size: 1.4vw
+        --ration-font-size: 1.4vw
     }
 }
 
 @media (min-width: 961px) {
-    .HeroSection--illustration {
+    .HeroSection--ration {
         perspective:1500px;
         margin-bottom: 1em
     }
 
-    .HeroSection--illustration-card {
+    .HeroSection--ration-card {
         transform: rotate3d(.5,-.866,0,15deg) rotateZ(1deg);
         box-shadow: 2em 4em 6em -2em rgb(0,0,0,.5),1em 2em 3.5em -2.5em rgba(0,0,0,.5);
         border-radius: .5em;
@@ -757,7 +757,7 @@ body {
 }
 
 @media (min-width: 961px) and (hover:hover) {
-    .HeroSection--illustration:hover .HeroSection--illustration-card,.HeroSection--illustration[has-selection-contained-within] .HeroSection--illustration-card {
+    .HeroSection--ration:hover .HeroSection--ration-card,.HeroSection--ration[has-selection-contained-within] .HeroSection--ration-card {
         transform:rotate3d(0,0,0,0deg) rotateZ(0deg)
     }
 }
@@ -783,7 +783,7 @@ body {
         font-size: 1em
     }
 
-    .HeroSection--illustration {
+    .HeroSection--ration {
         width: 100%
     }
 }
@@ -821,7 +821,7 @@ body {
         display: flex
     }
 
-    .HeroSection--illustration {
+    .HeroSection--ration {
         font-size: .75em
     }
 }
@@ -975,7 +975,9 @@ body {
 }
 
 .BenefitsSection--benefit-illustration {
-    margin-bottom: .5em
+    margin-bottom: .5em;
+    height: 150px;
+    width: 150px;
 }
 
 .BenefitsSection--benefit-title {
@@ -1370,5 +1372,5 @@ body {
 }
 
 .try-now {
-  
+
 }
