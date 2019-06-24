@@ -679,7 +679,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    --vertical-padding-top: 4em;--horizontal-gap: 4em;--ration-width-ems: 28.8;--ration-font-size: 1em;padding: calc(var(--header-height) + var(--vertical-padding-top)) 2em var(--section-vertical-padding);
+    --vertical-padding-top: 4em;--horizontal-gap: 4em;--illustration-width-ems: 28.8;--illustration-font-size: 1em;padding: calc(var(--header-height) + var(--vertical-padding-top)) 2em var(--section-vertical-padding);
     width: 100%
 }
 
@@ -727,37 +727,35 @@ body {
     margin-right: 1em
 }
 
-.HeroSection--ration {
+.HeroSection--illustration {
     flex-shrink: 0;
-    font-size: var(--ration-font-size);
-    width: calc(1em*var(--ration-width-ems))
+    font-size: var(--illustration-font-size);
+    width: calc(1em*var(--illustration-width-ems))
 }
 
 @media (min-width: 961px) and (max-width:1300px) {
     .HeroSection--column {
-        --ration-font-size: 1.4vw
+        --illustration-font-size: 1.4vw
     }
 }
 
 @media (min-width: 961px) {
-    .HeroSection--ration {
+    .HeroSection--illustration {
         perspective:1500px;
         margin-bottom: 1em
     }
 
-    .HeroSection--ration-card {
+    .HeroSection--illustration-card {
         transform: rotate3d(.5,-.866,0,15deg) rotateZ(1deg);
         box-shadow: 2em 4em 6em -2em rgb(0,0,0,.5),1em 2em 3.5em -2.5em rgba(0,0,0,.5);
         border-radius: .5em;
         will-change: transform;
-        transition: transform .4s ease,box-shadow .4s ease;
-        background-color: black;
-        color: white;
+        transition: transform .4s ease,box-shadow .4s ease
     }
 }
 
 @media (min-width: 961px) and (hover:hover) {
-    .HeroSection--ration:hover .HeroSection--ration-card,.HeroSection--ration[has-selection-contained-within] .HeroSection--ration-card {
+    .HeroSection--illustration:hover .HeroSection--illustration-card,.HeroSection--illustration[has-selection-contained-within] .HeroSection--illustration-card {
         transform:rotate3d(0,0,0,0deg) rotateZ(0deg)
     }
 }
@@ -783,7 +781,7 @@ body {
         font-size: 1em
     }
 
-    .HeroSection--ration {
+    .HeroSection--illustration {
         width: 100%
     }
 }
@@ -821,7 +819,7 @@ body {
         display: flex
     }
 
-    .HeroSection--ration {
+    .HeroSection--illustration {
         font-size: .75em
     }
 }
@@ -867,7 +865,7 @@ body {
 }
 
 .QuoteSection--quote>p {
-
+    text-indent: -.425em
 }
 
 @media (max-width: 768px) {
@@ -882,9 +880,23 @@ body {
         margin: 0 0 1em
     }
 
+    .QuoteSection--cite {
+        order: 1;
+        margin: 0;
+        padding-left: 3em;
+        font-style: italic
+    }
+
     .QuoteSection--cite-name {
         position: relative;
         font-size: 1.25em
+    }
+
+    .QuoteSection--cite-name::before {
+        position: absolute;
+        content: "—";
+        top: 0;
+        right: calc(100% + .4em)
     }
 }
 
@@ -896,9 +908,6 @@ body {
     margin-left: auto;
     margin-right: auto;
     padding-bottom: var(--section-vertical-padding);
-
-    margin-bottom: 0;
-    padding-bottom: 0;
 }
 
 .GreatPowerSection--title {
@@ -949,8 +958,7 @@ body {
 
 .BenefitsSection--cta {
     font-size: 1.333em;
-    text-align: center;
-    align-items: center;
+    text-align: center
 }
 
 .BenefitsSection--cta-title {
@@ -1369,8 +1377,4 @@ body {
 
 .SetupSection--button-and-text-text {
     flex: 1
-}
-
-.try-now {
-
 }
